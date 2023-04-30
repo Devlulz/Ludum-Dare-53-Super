@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -20,7 +21,10 @@ public class PlayerController : MonoBehaviour
     float distToGround;
     [SerializeField]
     float distBetweenSides;
-
+    [SerializeField]
+    Gun equipedGun;
+    [SerializeField]
+    Gun fallbackGun;
     [SerializeField]
     Rigidbody2D rb;
     [SerializeField]
@@ -45,6 +49,10 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Jump");
             rb.AddForce(Vector2.up * yAccel);
         }
+
+        GunLogic();
+
+       
     }
 
     bool IsGrounded()
@@ -54,6 +62,22 @@ public class PlayerController : MonoBehaviour
    
 
     private void FixedUpdate()
+    {
+        Movement();
+        GravityMod();
+
+        
+    }
+
+    void GravityMod()
+    {
+        if (rb.velocity.y < -.1)
+            rb.gravityScale = gravFall;
+        else
+            rb.gravityScale = gravRise;
+    }
+
+    void Movement()
     {
         if (IsGrounded())
         {
@@ -72,20 +96,23 @@ public class PlayerController : MonoBehaviour
             else if (Input.GetKey(KeyCode.A))
                 rb.AddForce(Vector2.left * xAccel * airControlMod);
         }
-            
 
-            
+
+
 
         if (Mathf.Abs(rb.velocity.x) > xMax)
         {
             Debug.Log("testX");
             rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x, -xMax, xMax), rb.velocity.y);
         }
+    }
 
+    void GunLogic()
+    {
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
 
-        if (rb.velocity.y < -.1)
-            rb.gravityScale = gravFall;
-        else
-            rb.gravityScale = gravRise;
+            equipedGun.Shoot(Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position);
+        }
     }
 }
