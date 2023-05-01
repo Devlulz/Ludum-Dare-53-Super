@@ -7,9 +7,9 @@ abstract public class Gun : MonoBehaviour
     public int capacity = 1;
     public int range = 10;
     public float deviation = 0;
-    public float shotDelay;
-    public float RPM;
-    public int damage;
+    public float shotDelay = 0;
+    public float RPM = 60;
+    public int damage = 10;
 
     // Start is called before the first frame update
     void Start()
@@ -31,11 +31,11 @@ abstract public class Gun : MonoBehaviour
         }
     }
 
-    virtual public void Activate(Vector2 dir)
+    virtual public void Activate()
     {
         if (shotDelay <= 0)
         {
-            Shoot(dir);
+            Shoot();
         }
     }
 
@@ -44,9 +44,9 @@ abstract public class Gun : MonoBehaviour
 
     }
 
-    virtual public bool Shoot(Vector2 dir)
+    virtual public bool Shoot()
     {
-        
+        Vector2 dir = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
             Quaternion spread = Quaternion.AngleAxis(Random.Range(-deviation, deviation), Vector3.forward);
             RaycastHit2D hit = Physics2D.Raycast(transform.position, spread * dir, range, LayerMask.GetMask("Hostile"));
             if (hit.collider != null)

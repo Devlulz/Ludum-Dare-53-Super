@@ -16,13 +16,13 @@ public class AutoRifle : Gun
     // Update is called once per frame
     void Update()
     {
-        if (firing)
+        if (firing && shotDelay <= 0)
         {
-            Shoot(Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position);
+            Shoot();
         }
     }
 
-    public override void Activate(Vector2 dir)
+    public override void Activate()
     {
         firing = true;
     }

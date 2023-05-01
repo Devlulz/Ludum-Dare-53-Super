@@ -150,7 +150,13 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
 
-            equipedGun.Shoot(Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position);
+            equipedGun.Activate();
+        }
+
+        if (Input.GetKeyUp(KeyCode.Mouse0))
+        {
+
+            equipedGun.Deactivate();
         }
     }
 }

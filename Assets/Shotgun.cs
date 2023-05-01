@@ -25,12 +25,12 @@ public class Shotgun : Gun
         return true;
     }
 
-    public override bool Shoot(Vector2 dir)
+    public override bool Shoot()
     {
         
         for (int i = 0; i < pellets; i++)
         {
-            base.Shoot(dir);
+            base.Shoot();
         }
         shotDelay = 1 / (RPM / 60);
         return true;
