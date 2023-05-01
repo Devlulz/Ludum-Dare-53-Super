@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 3840
     height: 1509
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Git for Unity
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 42319
+  controlID: 105
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 42320
+  controlID: 53
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 42321
+  controlID: 54
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 42345
+  controlID: 69
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -295,8 +295,8 @@ MonoBehaviour:
     y: 0
     width: 1410
     height: 595
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 102, y: 121}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -312,7 +312,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: InspectorWindow
+  m_Name: Window
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -321,14 +321,14 @@ MonoBehaviour:
     y: 0
     width: 907
     height: 1459
-  m_MinSize: {x: 276, y: 71}
+  m_MinSize: {x: 101, y: 121}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 21}
+  m_ActualView: {fileID: 22}
   m_Panes:
   - {fileID: 21}
   - {fileID: 22}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -388,9 +388,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 5e7e0100
-      m_LastClickedID: 97886
-      m_ExpandedIDs: 3cb3feff46b3feff6ab3feff46b5feff28dffeff2edffeff36dffeff40dffeff64dffeff0ae0feff2495ffff70a3ffffeafafffff2fafffff8faffff02fbffff0afbffff26fbffff2a6200002e620000024801009c7e0100c67e01000a7f0100
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 26fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -696,7 +696,7 @@ MonoBehaviour:
   m_Position:
     m_Target: {x: -2.6923714, y: -5.5266433, z: -0.7173836}
     speed: 2
-    m_Value: {x: -2.7519605, y: -5.627274, z: -0.72060776}
+    m_Value: {x: -2.6923714, y: -5.5266433, z: -0.7173836}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -749,7 +749,7 @@ MonoBehaviour:
   m_Size:
     m_Target: 6.8423142
     speed: 2
-    m_Value: 7.1647267
+    m_Value: 6.8423142
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1020,7 +1020,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 686d0000
     m_LastClickedID: 28008
-    m_ExpandedIDs: 0000000096630000b663000000ca9a3b
+    m_ExpandedIDs: 00000000ec640000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1048,7 +1048,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000009663000000ca9a3b
+    m_ExpandedIDs: 00000000ec640000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1207,11 +1207,11 @@ MonoBehaviour:
   progressMessageClearTime: -1
   notificationClearTime: -1
   timeSinceLastRotation: -1
-  currentBranchAndRemoteHasUpdate: 1
-  currentTrackingStatusHasUpdate: 1
-  currentStatusEntriesHasUpdate: 1
-  repositoryProgressHasUpdate: 1
-  appManagerProgressHasUpdate: 1
+  currentBranchAndRemoteHasUpdate: 0
+  currentTrackingStatusHasUpdate: 0
+  currentStatusEntriesHasUpdate: 0
+  repositoryProgressHasUpdate: 0
+  appManagerProgressHasUpdate: 0
   changeTab: 3
   activeTab: 3
   initProjectView:
@@ -1296,638 +1296,20 @@ MonoBehaviour:
     localBranches: []
     remoteBranches: []
   changesView:
-    currentBranchHasUpdate: 1
-    currentStatusEntriesHasUpdate: 1
-    currentLocksHasUpdate: 1
+    currentBranchHasUpdate: 0
+    currentStatusEntriesHasUpdate: 0
+    currentLocksHasUpdate: 0
     commitBody: 
     commitMessage: 
     currentBranch: main
     treeScroll: {x: 0, y: 0}
     treeChanges:
       assets:
-        keys:
-        - 00000000000000001000000000000000
-        - ac1c1591b705b9648adff67fdcdb6106
-        - f8b36e8a2d2c59442929e3650121d3bd
-        - d58645fbc43d8644b97d18613fa4fbf5
-        - 131a6b21c8605f84396be9f6751fb6e3
-        - fb1ab97dafcdd584fb9e264fa7ad258d
-        - ad9bd5ce376f3d24db1fd418cc147207
-        - 75216c992e6a8cb4b9017260b43874ee
-        - c6925199c79b74a46a93e8b543711dcc
-        - ec295093d5e250f4c9dde8383cebf1e9
-        - 5474b4913c05e3640b819abefa73e3aa
-        - e0a690d55ef36ab42b7cd60cfbf271ff
-        - f1503c18474cde949a8e492aaffc63fb
-        - 9d01b2726642c774aaa1717eca6d6aa0
-        - 0cd6326581843cb40b13f67ea0abdcd3
-        - e791c019e72ad42438f0538d863bd7a7
-        - 1fd1566cf5b43e54b8df379fca5495dd
-        - 058b373579bae624d8468e231331ac0d
-        - 34cb4c95e1877624c86bf90e6c2057d1
-        - 20cf9e22a7d49b347b28585102fbaff9
-        - 7a3f085b8c6fde84fba47e9bcd88dee2
-        - 0cf49e57e6c4f614a8a443d13189b8e3
-        - bb85f3e53bbcc304fae37c35b306df6e
-        values:
-        - path: Assets
-          label: Assets
-          level: 0
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\ArrowPopUp.cs
-          label: ArrowPopUp.cs
-          level: 1
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\ArrowPopUp.cs
-            fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\ArrowPopUp.cs
-            projectPath: Assets\ArrowPopUp.cs
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: Assets\Prefabs
-          label: Prefabs
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Prefabs\Crate Carriage.prefab
-          label: Crate Carriage.prefab
-          level: 2
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Prefabs\Crate Carriage.prefab
-            fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\Prefabs\Crate
-              Carriage.prefab
-            projectPath: Assets\Prefabs\Crate Carriage.prefab
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
-        - path: Assets\Scenes
-          label: Scenes
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Scenes\Lulz Scene.unity
-          label: Lulz Scene.unity
-          level: 2
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scenes\Lulz Scene.unity
-            fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\Scenes\Lulz
-              Scene.unity
-            projectPath: Assets\Scenes\Lulz Scene.unity
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
-        - path: Assets\Sprites
-          label: Sprites
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Sprites\Background
-          label: Background
-          level: 2
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Sprites\Background\Layer -1.png
-          label: Layer -1.png
-          level: 3
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Sprites\Background\Layer -1.png
-            fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\Sprites\Background\Layer
-              -1.png
-            projectPath: Assets\Sprites\Background\Layer -1.png
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
-        - path: Assets\Sprites\Background\Layer 3.png
-          label: Layer 3.png
-          level: 3
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Sprites\Background\Layer 3.png
-            fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\Sprites\Background\Layer
-              3.png
-            projectPath: Assets\Sprites\Background\Layer 3.png
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
-        - path: Assets\Sprites\Badnit Run Cycle.aseprite
-          label: Badnit Run Cycle.aseprite
-          level: 2
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Sprites\Badnit Run Cycle.aseprite
-            fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\Sprites\Badnit
-              Run Cycle.aseprite
-            projectPath: Assets\Sprites\Badnit Run Cycle.aseprite
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
-        - path: Assets\Sprites\Down Arroy.controller
-          label: Down Arroy.controller
-          level: 2
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Sprites\Down Arroy.controller
-            fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\Sprites\Down
-              Arroy.controller
-            projectPath: Assets\Sprites\Down Arroy.controller
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: Assets\Sprites\Down Arroy.png
-          label: Down Arroy.png
-          level: 2
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Sprites\Down Arroy.png
-            fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\Sprites\Down
-              Arroy.png
-            projectPath: Assets\Sprites\Down Arroy.png
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: Assets\Sprites\Gun
-          label: Gun
-          level: 2
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Sprites\Gun\Effects
-          label: Effects
-          level: 3
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Sprites\Gun\Effects\Animations
-          label: Animations
-          level: 4
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Sprites\Gun\Effects\Animations\BANG.anim
-          label: BANG.anim
-          level: 5
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Sprites\Gun\Effects\Animations\BANG.anim
-            fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\Sprites\Gun\Effects\Animations\BANG.anim
-            projectPath: Assets\Sprites\Gun\Effects\Animations\BANG.anim
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: Assets\Sprites\Gun\Effects\Animations\GameObject.controller
-          label: GameObject.controller
-          level: 5
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Sprites\Gun\Effects\Animations\GameObject.controller
-            fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\Sprites\Gun\Effects\Animations\GameObject.controller
-            projectPath: Assets\Sprites\Gun\Effects\Animations\GameObject.controller
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: Assets\Sprites\Gun\Effects\Shotgun Flash.aseprite
-          label: Shotgun Flash.aseprite
-          level: 4
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Sprites\Gun\Effects\Shotgun Flash.aseprite
-            fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\Sprites\Gun\Effects\Shotgun
-              Flash.aseprite
-            projectPath: Assets\Sprites\Gun\Effects\Shotgun Flash.aseprite
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: Assets\Sprites\Gun\Effects\Shotgun Flash-Sheet.png
-          label: Shotgun Flash-Sheet.png
-          level: 4
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Sprites\Gun\Effects\Shotgun Flash-Sheet.png
-            fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\Sprites\Gun\Effects\Shotgun
-              Flash-Sheet.png
-            projectPath: Assets\Sprites\Gun\Effects\Shotgun Flash-Sheet.png
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: Assets\Sprites\Idle.anim
-          label: Idle.anim
-          level: 2
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Sprites\Idle.anim
-            fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\Sprites\Idle.anim
-            projectPath: Assets\Sprites\Idle.anim
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: Assets\Sprites\Player
-          label: Player
-          level: 2
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Sprites\Player\Character Jump 1Arm-Sheet.png
-          label: Character Jump 1Arm-Sheet.png
-          level: 3
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Sprites\Player\Character Jump 1Arm-Sheet.png
-            fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\Sprites\Player\Character
-              Jump 1Arm-Sheet.png
-            projectPath: Assets\Sprites\Player\Character Jump 1Arm-Sheet.png
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
+        keys: []
+        values: []
       folders:
-        keys:
-        - Assets
-        - Assets\Prefabs
-        - Assets\Scenes
-        - Assets\Sprites
-        - Assets\Sprites\Background
-        - Assets\Sprites\Gun
-        - Assets\Sprites\Gun\Effects
-        - Assets\Sprites\Gun\Effects\Animations
-        - Assets\Sprites\Player
-        values:
-        - path: Assets
-          label: Assets
-          level: 0
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Prefabs
-          label: Prefabs
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Scenes
-          label: Scenes
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Sprites
-          label: Sprites
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Sprites\Background
-          label: Background
-          level: 2
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Sprites\Gun
-          label: Gun
-          level: 2
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Sprites\Gun\Effects
-          label: Effects
-          level: 3
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Sprites\Gun\Effects\Animations
-          label: Animations
-          level: 4
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Sprites\Player
-          label: Player
-          level: 2
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
+        keys: []
+        values: []
       checkedFileNodes:
         keys: []
         values: []
@@ -1956,614 +1338,6 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets
-        label: Assets
-        level: 0
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\ArrowPopUp.cs
-        label: ArrowPopUp.cs
-        level: 1
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\ArrowPopUp.cs
-          fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\ArrowPopUp.cs
-          projectPath: Assets\ArrowPopUp.cs
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\ArrowPopUp.cs.meta
-        label: ArrowPopUp.cs.meta
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\ArrowPopUp.cs.meta
-          fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\ArrowPopUp.cs.meta
-          projectPath: Assets\ArrowPopUp.cs.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Prefabs
-        label: Prefabs
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Prefabs\Crate Carriage.prefab
-        label: Crate Carriage.prefab
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Prefabs\Crate Carriage.prefab
-          fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\Prefabs\Crate
-            Carriage.prefab
-          projectPath: Assets\Prefabs\Crate Carriage.prefab
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: Assets\Scenes
-        label: Scenes
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Scenes\Lulz Scene.unity
-        label: Lulz Scene.unity
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scenes\Lulz Scene.unity
-          fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\Scenes\Lulz
-            Scene.unity
-          projectPath: Assets\Scenes\Lulz Scene.unity
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: Assets\Sprites
-        label: Sprites
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Sprites\Background
-        label: Background
-        level: 2
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Sprites\Background\Layer -1.png
-        label: Layer -1.png
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Sprites\Background\Layer -1.png
-          fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\Sprites\Background\Layer
-            -1.png
-          projectPath: Assets\Sprites\Background\Layer -1.png
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: Assets\Sprites\Background\Layer 3.png
-        label: Layer 3.png
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Sprites\Background\Layer 3.png
-          fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\Sprites\Background\Layer
-            3.png
-          projectPath: Assets\Sprites\Background\Layer 3.png
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: Assets\Sprites\Badnit Run Cycle.aseprite
-        label: Badnit Run Cycle.aseprite
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Sprites\Badnit Run Cycle.aseprite
-          fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\Sprites\Badnit
-            Run Cycle.aseprite
-          projectPath: Assets\Sprites\Badnit Run Cycle.aseprite
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: Assets\Sprites\Down Arroy.controller
-        label: Down Arroy.controller
-        level: 2
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Sprites\Down Arroy.controller
-          fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\Sprites\Down
-            Arroy.controller
-          projectPath: Assets\Sprites\Down Arroy.controller
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Sprites\Down Arroy.controller.meta
-        label: Down Arroy.controller.meta
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Sprites\Down Arroy.controller.meta
-          fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\Sprites\Down
-            Arroy.controller.meta
-          projectPath: Assets\Sprites\Down Arroy.controller.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Sprites\Down Arroy.png
-        label: Down Arroy.png
-        level: 2
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Sprites\Down Arroy.png
-          fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\Sprites\Down
-            Arroy.png
-          projectPath: Assets\Sprites\Down Arroy.png
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Sprites\Down Arroy.png.meta
-        label: Down Arroy.png.meta
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Sprites\Down Arroy.png.meta
-          fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\Sprites\Down
-            Arroy.png.meta
-          projectPath: Assets\Sprites\Down Arroy.png.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Sprites\Gun
-        label: Gun
-        level: 2
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Sprites\Gun\Effects.meta
-        label: Effects.meta
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Sprites\Gun\Effects.meta
-          fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\Sprites\Gun\Effects.meta
-          projectPath: Assets\Sprites\Gun\Effects.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Sprites\Gun\Effects
-        label: Effects
-        level: 3
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Sprites\Gun\Effects\Animations.meta
-        label: Animations.meta
-        level: 4
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Sprites\Gun\Effects\Animations.meta
-          fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\Sprites\Gun\Effects\Animations.meta
-          projectPath: Assets\Sprites\Gun\Effects\Animations.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Sprites\Gun\Effects\Animations
-        label: Animations
-        level: 4
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Sprites\Gun\Effects\Animations\BANG.anim
-        label: BANG.anim
-        level: 5
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Sprites\Gun\Effects\Animations\BANG.anim
-          fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\Sprites\Gun\Effects\Animations\BANG.anim
-          projectPath: Assets\Sprites\Gun\Effects\Animations\BANG.anim
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Sprites\Gun\Effects\Animations\BANG.anim.meta
-        label: BANG.anim.meta
-        level: 6
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Sprites\Gun\Effects\Animations\BANG.anim.meta
-          fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\Sprites\Gun\Effects\Animations\BANG.anim.meta
-          projectPath: Assets\Sprites\Gun\Effects\Animations\BANG.anim.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Sprites\Gun\Effects\Animations\GameObject.controller
-        label: GameObject.controller
-        level: 5
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Sprites\Gun\Effects\Animations\GameObject.controller
-          fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\Sprites\Gun\Effects\Animations\GameObject.controller
-          projectPath: Assets\Sprites\Gun\Effects\Animations\GameObject.controller
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Sprites\Gun\Effects\Animations\GameObject.controller.meta
-        label: GameObject.controller.meta
-        level: 6
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Sprites\Gun\Effects\Animations\GameObject.controller.meta
-          fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\Sprites\Gun\Effects\Animations\GameObject.controller.meta
-          projectPath: Assets\Sprites\Gun\Effects\Animations\GameObject.controller.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Sprites\Gun\Effects\Shotgun Flash.aseprite
-        label: Shotgun Flash.aseprite
-        level: 4
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Sprites\Gun\Effects\Shotgun Flash.aseprite
-          fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\Sprites\Gun\Effects\Shotgun
-            Flash.aseprite
-          projectPath: Assets\Sprites\Gun\Effects\Shotgun Flash.aseprite
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Sprites\Gun\Effects\Shotgun Flash.aseprite.meta
-        label: Shotgun Flash.aseprite.meta
-        level: 5
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Sprites\Gun\Effects\Shotgun Flash.aseprite.meta
-          fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\Sprites\Gun\Effects\Shotgun
-            Flash.aseprite.meta
-          projectPath: Assets\Sprites\Gun\Effects\Shotgun Flash.aseprite.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Sprites\Gun\Effects\Shotgun Flash-Sheet.png
-        label: Shotgun Flash-Sheet.png
-        level: 4
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Sprites\Gun\Effects\Shotgun Flash-Sheet.png
-          fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\Sprites\Gun\Effects\Shotgun
-            Flash-Sheet.png
-          projectPath: Assets\Sprites\Gun\Effects\Shotgun Flash-Sheet.png
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Sprites\Gun\Effects\Shotgun Flash-Sheet.png.meta
-        label: Shotgun Flash-Sheet.png.meta
-        level: 5
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Sprites\Gun\Effects\Shotgun Flash-Sheet.png.meta
-          fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\Sprites\Gun\Effects\Shotgun
-            Flash-Sheet.png.meta
-          projectPath: Assets\Sprites\Gun\Effects\Shotgun Flash-Sheet.png.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Sprites\Idle.anim
-        label: Idle.anim
-        level: 2
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Sprites\Idle.anim
-          fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\Sprites\Idle.anim
-          projectPath: Assets\Sprites\Idle.anim
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Sprites\Idle.anim.meta
-        label: Idle.anim.meta
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Sprites\Idle.anim.meta
-          fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\Sprites\Idle.anim.meta
-          projectPath: Assets\Sprites\Idle.anim.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Sprites\Player
-        label: Player
-        level: 2
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Sprites\Player\Character Jump 1Arm-Sheet.png
-        label: Character Jump 1Arm-Sheet.png
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Sprites\Player\Character Jump 1Arm-Sheet.png
-          fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\Sprites\Player\Character
-            Jump 1Arm-Sheet.png
-          projectPath: Assets\Sprites\Player\Character Jump 1Arm-Sheet.png
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
       selectedNode:
         path: 
         label: 
@@ -2583,174 +1357,16 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-    gitStatusEntries:
-    - path: Assets\ArrowPopUp.cs
-      fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\ArrowPopUp.cs
-      projectPath: Assets\ArrowPopUp.cs
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\ArrowPopUp.cs.meta
-      fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\ArrowPopUp.cs.meta
-      projectPath: Assets\ArrowPopUp.cs.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Prefabs\Crate Carriage.prefab
-      fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\Prefabs\Crate
-        Carriage.prefab
-      projectPath: Assets\Prefabs\Crate Carriage.prefab
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: Assets\Scenes\Lulz Scene.unity
-      fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\Scenes\Lulz
-        Scene.unity
-      projectPath: Assets\Scenes\Lulz Scene.unity
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: Assets\Sprites\Background\Layer -1.png
-      fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\Sprites\Background\Layer
-        -1.png
-      projectPath: Assets\Sprites\Background\Layer -1.png
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: Assets\Sprites\Background\Layer 3.png
-      fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\Sprites\Background\Layer
-        3.png
-      projectPath: Assets\Sprites\Background\Layer 3.png
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: Assets\Sprites\Badnit Run Cycle.aseprite
-      fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\Sprites\Badnit
-        Run Cycle.aseprite
-      projectPath: Assets\Sprites\Badnit Run Cycle.aseprite
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: Assets\Sprites\Down Arroy.controller
-      fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\Sprites\Down
-        Arroy.controller
-      projectPath: Assets\Sprites\Down Arroy.controller
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Sprites\Down Arroy.controller.meta
-      fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\Sprites\Down
-        Arroy.controller.meta
-      projectPath: Assets\Sprites\Down Arroy.controller.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Sprites\Down Arroy.png
-      fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\Sprites\Down
-        Arroy.png
-      projectPath: Assets\Sprites\Down Arroy.png
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Sprites\Down Arroy.png.meta
-      fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\Sprites\Down
-        Arroy.png.meta
-      projectPath: Assets\Sprites\Down Arroy.png.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Sprites\Gun\Effects.meta
-      fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\Sprites\Gun\Effects.meta
-      projectPath: Assets\Sprites\Gun\Effects.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Sprites\Gun\Effects\Animations.meta
-      fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\Sprites\Gun\Effects\Animations.meta
-      projectPath: Assets\Sprites\Gun\Effects\Animations.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Sprites\Gun\Effects\Animations\BANG.anim
-      fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\Sprites\Gun\Effects\Animations\BANG.anim
-      projectPath: Assets\Sprites\Gun\Effects\Animations\BANG.anim
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Sprites\Gun\Effects\Animations\BANG.anim.meta
-      fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\Sprites\Gun\Effects\Animations\BANG.anim.meta
-      projectPath: Assets\Sprites\Gun\Effects\Animations\BANG.anim.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Sprites\Gun\Effects\Animations\GameObject.controller
-      fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\Sprites\Gun\Effects\Animations\GameObject.controller
-      projectPath: Assets\Sprites\Gun\Effects\Animations\GameObject.controller
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Sprites\Gun\Effects\Animations\GameObject.controller.meta
-      fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\Sprites\Gun\Effects\Animations\GameObject.controller.meta
-      projectPath: Assets\Sprites\Gun\Effects\Animations\GameObject.controller.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Sprites\Gun\Effects\Shotgun Flash.aseprite
-      fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\Sprites\Gun\Effects\Shotgun
-        Flash.aseprite
-      projectPath: Assets\Sprites\Gun\Effects\Shotgun Flash.aseprite
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Sprites\Gun\Effects\Shotgun Flash.aseprite.meta
-      fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\Sprites\Gun\Effects\Shotgun
-        Flash.aseprite.meta
-      projectPath: Assets\Sprites\Gun\Effects\Shotgun Flash.aseprite.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Sprites\Gun\Effects\Shotgun Flash-Sheet.png
-      fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\Sprites\Gun\Effects\Shotgun
-        Flash-Sheet.png
-      projectPath: Assets\Sprites\Gun\Effects\Shotgun Flash-Sheet.png
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Sprites\Gun\Effects\Shotgun Flash-Sheet.png.meta
-      fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\Sprites\Gun\Effects\Shotgun
-        Flash-Sheet.png.meta
-      projectPath: Assets\Sprites\Gun\Effects\Shotgun Flash-Sheet.png.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Sprites\Idle.anim
-      fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\Sprites\Idle.anim
-      projectPath: Assets\Sprites\Idle.anim
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Sprites\Idle.anim.meta
-      fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\Sprites\Idle.anim.meta
-      projectPath: Assets\Sprites\Idle.anim.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Sprites\Player\Character Jump 1Arm-Sheet.png
-      fullPath: C:\Users\User\Desktop\Coding\Ludum-Dare-53-Super\Assets\Sprites\Player\Character
-        Jump 1Arm-Sheet.png
-      projectPath: Assets\Sprites\Player\Character Jump 1Arm-Sheet.png
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    changedFilesText: 24 changed files
+    gitStatusEntries: []
+    changedFilesText: No changed files
     lastCurrentBranchChangedEvent:
-      updatedTimeString: 2023-05-01T22:28:42.604+10:00
+      updatedTimeString: 2023-05-01T22:44:56.381+10:00
       cacheType: 1
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2023-05-01T22:39:59.746+10:00
+      updatedTimeString: 2023-05-01T22:44:31.416+10:00
       cacheType: 6
     lastLocksChangedEvent:
-      updatedTimeString: 2023-05-01T22:40:00.027+10:00
+      updatedTimeString: 2023-05-01T22:42:49.647+10:00
       cacheType: 7
   historyView:
     currentLogHasUpdate: 0
@@ -4651,7 +3267,7 @@ MonoBehaviour:
   currentRemoteUrl: https://github.com/Devlulz/Ludum-Dare-53-Super
   statusAhead: 0
   statusBehind: 0
-  hasItemsToCommit: 1
+  hasItemsToCommit: 0
   isTrackingRemoteBranch: 1
   currentBranchContent:
     m_Text: main
@@ -4662,13 +3278,13 @@ MonoBehaviour:
     m_Image: {fileID: 0}
     m_Tooltip: Url of the origin remote
   lastCurrentBranchAndRemoteChangedEvent:
-    updatedTimeString: 2023-05-01T18:16:49.194+10:00
+    updatedTimeString: 2023-05-01T22:44:56.381+10:00
     cacheType: 1
   lastTrackingStatusChangedEvent:
-    updatedTimeString: 2023-05-01T18:17:13.181+10:00
+    updatedTimeString: 2023-05-01T22:44:56.860+10:00
     cacheType: 5
   lastStatusEntriesChangedEvent:
-    updatedTimeString: 2023-05-01T18:17:13.073+10:00
+    updatedTimeString: 2023-05-01T22:44:31.416+10:00
     cacheType: 6
   pullButtonContent:
     m_Text: Pull

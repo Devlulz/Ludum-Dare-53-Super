@@ -24,38 +24,68 @@ public class BanditAI : MonoBehaviour
     public bool walkingRight = true;
     bool stuckJumping;
     public bool wallCheck;
+    public bool playerDetected;
+
+    //difference between player Y and Bandit Y
+    float yDifference;
 
     [SerializeField]
     float xVel;
+    [SerializeField]
+    float yVel;
+
+    GameObject player;
+
+    [SerializeField]
+    GameObject bullet;
+    [SerializeField]
+    Transform firePoint;
+
+    float fireInterval = 1f;
+    float intervalTimer;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        player = GameObject.FindGameObjectWithTag("Player");
     }
     void Update()
     {
+        yDifference = transform.position.y - player.transform.position.y;
         xVel = rb.velocity.x;
+        yVel = rb.velocity.y;
         if (Input.GetKeyDown(KeyCode.F))
         {
             Jump();
+        }
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            Shoot();
+        }
+        if (xVel == 0 && yVel == 0)
+        {
+            anim.Play("Idle");
         }
     }
 
     private void FixedUpdate()
     {
-        if (isGrounded)
+        if (playerDetected)
+        {
+            Attack();
+        }
+        else if (isGrounded && !playerDetected)
         {
             //Debug.Log("AI IS ON THE GROUND");
             Walk();
         }
-        else
+        if(!isGrounded)
         {
             anim.Play("Jump");
         }
         LimitVelocity();
         if (stuckJumping && !wallCheck)
         {
-            Debug.Log("bruh");
             rb.AddForce(Vector2.right * speed, ForceMode2D.Impulse);
         }
     }
@@ -76,6 +106,29 @@ public class BanditAI : MonoBehaviour
         }
     }
 
+    void Attack()
+    {
+        if(transform.position.y > player.transform.position.y)
+        {
+            Walk();
+        }
+        if (Mathf.Abs(yDifference) < 10)
+        {
+            Shoot();
+        }
+    }
+
+    void Shoot()
+    {
+        Debug.Log("FUCKIN SHOOTING");
+        intervalTimer -= .02f;
+        if(intervalTimer < 0)
+        {
+            Instantiate(bullet, firePoint.position, transform.rotation);
+            intervalTimer = fireInterval;
+        }
+        
+    }
     IEnumerator StuckJump()
     {
         yield return new WaitForSeconds(1f);
@@ -83,7 +136,7 @@ public class BanditAI : MonoBehaviour
         {
             Jump();
             stuckJumping = true;
-            Debug.Log("TRYING");
+            //Debug.Log("TRYING");
         }
     }
 

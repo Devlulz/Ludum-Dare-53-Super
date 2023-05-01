@@ -399,6 +399,7 @@ MonoBehaviour:
   RPM: 120
   damage: 10
   pellets: 5
+  anim: {fileID: 0}
 --- !u!212 &346088343
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -528,6 +529,8 @@ MonoBehaviour:
   shotDelay: 0
   RPM: 90
   damage: 20
+  reloadTime: 5
+  anim: {fileID: 0}
 --- !u!1 &483015179
 GameObject:
   m_ObjectHideFlags: 0
@@ -1265,6 +1268,7 @@ MonoBehaviour:
   rb: {fileID: 0}
   col: {fileID: 0}
   anim: {fileID: 1374318794}
+  facingRight: 0
 --- !u!50 &1895818490
 Rigidbody2D:
   serializedVersion: 4
@@ -1321,7 +1325,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1895818488}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfc8582f4c123d94d8d27157c2dcba96, type: 3}
+  m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1895818493

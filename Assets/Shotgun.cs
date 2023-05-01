@@ -19,10 +19,10 @@ public class Shotgun : Gun
 
     public override bool Shoot()
     {
+        anim.Play("BANG");
         for (int i = 0; i < pellets; i++)
         {
             base.Shoot();
-            anim.Play("BANG");
         }
         shotDelay = 1 / (RPM / 60);
         return true;
