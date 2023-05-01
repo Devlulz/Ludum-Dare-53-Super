@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     int yAccel = 1;
     [SerializeField]
+    float maxSpeed = 10f;
+    [SerializeField]
     float airControlMod = 1;
     [SerializeField]
     int gravRise = 1;
@@ -30,7 +32,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     Collider2D col;
     LayerMask lm;
-
+    [SerializeField]
+    Animator anim;
 
     // Start is called before the first frame update
     void Start()
@@ -44,14 +47,14 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.W) && IsGrounded())
+        if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space)) && IsGrounded())
         {
             Debug.Log("Jump");
             rb.AddForce(Vector2.up * yAccel);
         }
 
         GunLogic();
-
+        LimitVelocity();
        
     }
 
@@ -72,9 +75,17 @@ public class PlayerController : MonoBehaviour
     void GravityMod()
     {
         if (rb.velocity.y < -.1)
+        {
             rb.gravityScale = gravFall;
+            if(!IsGrounded())
+                anim.Play("Fall");
+        }
         else
+        {
             rb.gravityScale = gravRise;
+            if (!IsGrounded())
+                anim.Play("Jump");
+        }
     }
 
     void Movement()
@@ -82,19 +93,38 @@ public class PlayerController : MonoBehaviour
         if (IsGrounded())
         {
             if (Input.GetKey(KeyCode.D))
+            {
                 rb.AddForce(Vector2.right * xAccel);
+                anim.transform.localScale = new Vector3(-1,1,1);
+                anim.Play("Run");
+            }
             else if (Input.GetKey(KeyCode.A))
+            {
                 rb.AddForce(Vector2.left * xAccel);
+                anim.transform.localScale = new Vector3(1, 1, 1);
+                anim.Play("Run");
+            }
             else
+            {
                 rb.velocity = new Vector2(0, rb.velocity.y);
+                anim.Play("Idle");
+            }
         }
 
         else
         {
             if (Input.GetKey(KeyCode.D))
+            {
                 rb.AddForce(Vector2.right * xAccel * airControlMod);
+                anim.transform.localScale = new Vector3(-1, 1, 1);
+            }
+                
             else if (Input.GetKey(KeyCode.A))
+            {
                 rb.AddForce(Vector2.left * xAccel * airControlMod);
+                anim.transform.localScale = new Vector3(1, 1, 1);
+            }
+                
         }
 
 
@@ -104,6 +134,14 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("testX");
             rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x, -xMax, xMax), rb.velocity.y);
+        }
+    }
+
+    void LimitVelocity()
+    {
+        if(rb.velocity.x < maxSpeed)
+        {
+            rb.velocity = new Vector2(maxSpeed * Input.GetAxis("Horizontal"),rb.velocity.y);
         }
     }
 
