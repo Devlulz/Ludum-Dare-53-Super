@@ -26,6 +26,7 @@ public class PeaShooter : Gun
     {
         base.Shoot();
         anim.Play("BANG");
+        GetComponent<AudioSource>().Play();
 
         shotDelay = 1 / (RPM / 60);
         return true;

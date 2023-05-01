@@ -58,6 +58,11 @@ public class PlayerController : MonoBehaviour
         GunLogic();
         LimitVelocity();
 
+        if(equipedGun == null)
+        {
+            fallbackGun.gameObject.SetActive(true);
+            equipedGun = fallbackGun;
+        }
     }
 
     bool IsGrounded()

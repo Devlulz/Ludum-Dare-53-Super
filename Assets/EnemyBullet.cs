@@ -10,6 +10,8 @@ public class EnemyBullet : MonoBehaviour
     [SerializeField]
     int dmg = 1;
 
+    public int xDir;
+
     private void Start()
     {
         StartCoroutine(DeathTimer());
@@ -31,7 +33,7 @@ public class EnemyBullet : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        rb.velocity = (Vector2.right * 5);
+        rb.velocity = (new Vector2(xDir, 0) * 5);
     }
 
     IEnumerator DeathTimer()

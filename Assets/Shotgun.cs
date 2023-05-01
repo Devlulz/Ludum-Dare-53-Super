@@ -20,6 +20,7 @@ public class Shotgun : Gun
     public override bool Shoot()
     {
         anim.Play("BANG");
+        GetComponent<AudioSource>().Play();
         for (int i = 0; i < pellets; i++)
         {
             base.Shoot();

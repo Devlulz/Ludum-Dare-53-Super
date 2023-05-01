@@ -27,6 +27,7 @@ public class BanditAI : MonoBehaviour
     public bool playerDetected;
 
     //difference between player Y and Bandit Y
+    [SerializeField]
     float yDifference;
 
     [SerializeField]
@@ -44,24 +45,50 @@ public class BanditAI : MonoBehaviour
     float fireInterval = 1f;
     float intervalTimer;
 
+    bool stopWalking;
+    [SerializeField]
+    float distanceUntilJump;
+
+    int xDir;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player");
+        intervalTimer = fireInterval;
     }
     void Update()
     {
+        if(player.transform.position.x < transform.position.x)
+        {
+            walkingRight = false;
+            xDir = -1;
+            anim.transform.localScale = new Vector3(-1, 1, 1);
+        }
+        else
+        {
+            walkingRight = true;
+            xDir = 1;
+            anim.transform.localScale = new Vector3(1, 1, 1);
+        }
         yDifference = transform.position.y - player.transform.position.y;
         xVel = rb.velocity.x;
         yVel = rb.velocity.y;
-        if (Input.GetKeyDown(KeyCode.F))
+        if(wallCheck && !stuckJumping)
+        {
+            stopWalking = true;
+        }
+        else if(wallCheck && stuckJumping)
+        {
+            stopWalking = false;
+        }
+        /*if (Input.GetKeyDown(KeyCode.F))
         {
             Jump();
         }
         if (Input.GetKeyDown(KeyCode.G))
         {
             Shoot();
-        }
+        }*/
         if (xVel == 0 && yVel == 0)
         {
             anim.Play("Idle");
@@ -74,7 +101,11 @@ public class BanditAI : MonoBehaviour
         {
             Attack();
         }
-        else if (isGrounded && !playerDetected)
+        else 
+        {
+            stopWalking = false;
+        }
+        if (isGrounded && !playerDetected && !stopWalking)
         {
             //Debug.Log("AI IS ON THE GROUND");
             Walk();
@@ -86,20 +117,20 @@ public class BanditAI : MonoBehaviour
         LimitVelocity();
         if (stuckJumping && !wallCheck)
         {
-            rb.AddForce(Vector2.right * speed, ForceMode2D.Impulse);
+            //rb.AddForce(Vector2.right * speed, ForceMode2D.Impulse);
         }
     }
 
     void Walk()
     {
-        rb.AddForce(Vector2.right * speed, ForceMode2D.Impulse);
-        if(xVel > 0)
+        rb.AddForce(new Vector2(xDir, 0) * speed, ForceMode2D.Impulse);
+        if (Mathf.Abs(xVel) > 0 && isGrounded)
         {
             anim.Play("Run");
             stuckJumping = false;
         }
             
-        if (xVel == 0)
+        if (xVel == 0 && wallCheck && stopWalking && isGrounded)
         {
             anim.Play("Idle");
             StartCoroutine(StuckJump());
@@ -108,6 +139,7 @@ public class BanditAI : MonoBehaviour
 
     void Attack()
     {
+        stopWalking = true;
         if(transform.position.y > player.transform.position.y)
         {
             Walk();
@@ -120,11 +152,18 @@ public class BanditAI : MonoBehaviour
 
     void Shoot()
     {
-        Debug.Log("FUCKIN SHOOTING");
+        //Debug.Log("FUCKIN SHOOTING");
         intervalTimer -= .02f;
+        if(intervalTimer < 0.1f && yDifference < distanceUntilJump)
+        {
+            
+            //Debug.Log("REACH");
+            Jump();
+        }
         if(intervalTimer < 0)
         {
-            Instantiate(bullet, firePoint.position, transform.rotation);
+            GameObject spawnedBullet = Instantiate(bullet, firePoint.position, transform.rotation);
+            spawnedBullet.GetComponent<EnemyBullet>().xDir = xDir;
             intervalTimer = fireInterval;
         }
         
@@ -137,7 +176,14 @@ public class BanditAI : MonoBehaviour
             Jump();
             stuckJumping = true;
             //Debug.Log("TRYING");
+            StartCoroutine(WHEREISYOURGODNOW());
         }
+    }
+
+    IEnumerator WHEREISYOURGODNOW()
+    {
+        yield return new WaitForSeconds(1.2f);
+        stuckJumping = false;
     }
 
     void Jump()
@@ -158,9 +204,9 @@ public class BanditAI : MonoBehaviour
 
     void LimitVelocity()
     {
-        if (rb.velocity.x > maxSpeed)
+        if (Mathf.Abs(rb.velocity.x) > maxSpeed)
         {
-            rb.velocity = new Vector2(maxSpeed , rb.velocity.y);
+            rb.velocity = new Vector2(maxSpeed * xDir , rb.velocity.y);
         }
     }
 }

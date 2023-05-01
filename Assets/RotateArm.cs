@@ -18,14 +18,14 @@ public class RotateArm : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (pc.facingRight)
+        if (pc.facingRight && pc.equipedGun != null)
         {
             transform.localScale = new Vector3(-1, 1, 1);
             pc.equipedGun.transform.localPosition = new Vector3(-0.318f, 0.0625f, 0);
             pc.equipedGun.transform.parent.localScale = new Vector3(1, -1, 1);
         }
             
-        else
+        else if(!pc.facingRight && pc.equipedGun != null)
         {
             transform.localScale = new Vector3(1, 1, 1);
             pc.equipedGun.transform.localPosition = new Vector3(-0.318f, 0.0625f,0f);

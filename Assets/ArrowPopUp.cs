@@ -8,10 +8,12 @@ public class ArrowPopUp : MonoBehaviour
     GameObject arrow;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        arrow.SetActive(true);
+        if(collision.CompareTag("Player"))
+            arrow.SetActive(true);
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        arrow.SetActive(false);
+        if (collision.CompareTag("Player"))
+            arrow.SetActive(false);
     }
 }

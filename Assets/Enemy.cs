@@ -4,25 +4,38 @@ using UnityEngine;
 
 public class Enemy : Character
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    Material flash;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [SerializeField]
+    Material OGMat;
+    [SerializeField]
+    float duration;
+
+    [SerializeField]
+    SpriteRenderer sprite;
 
     public override void TakeDamage(int damage)
     {
         base.TakeDamage(damage);
-
+        GetComponent<AudioSource>().Play();
+        StartCoroutine(FlashEffect());
         if (health < 0)
         {
-            Destroy(gameObject);
+            StartCoroutine(Die());
         }
+    }
+
+    IEnumerator Die()
+    {
+        yield return new WaitForSeconds(.15f);
+        Destroy(gameObject);
+    }
+
+    IEnumerator FlashEffect()
+    {
+        sprite.material = flash;
+        yield return new WaitForSeconds(duration);
+        sprite.material = OGMat;
     }
 }
