@@ -6,13 +6,7 @@ using UnityEngine;
 public class Shotgun : Gun
 {
     [SerializeField]
-    int damage = 20;
-    [SerializeField]
-    int range = 10;
-    [SerializeField]
     int pellets = 5;
-    [SerializeField]
-    float deviation = 10;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,18 +19,19 @@ public class Shotgun : Gun
 
     }
 
-    public override bool Shoot(Vector2 dir)
+    public override bool OutOfAmmo()
     {
-        
+        UnityEngine.Debug.Log("Drop Gun");
+        return true;
+    }
+
+    public override bool Shoot()
+    {
         for (int i = 0; i < pellets; i++)
         {
-            Quaternion spread = Quaternion.AngleAxis(Random.Range(-deviation, deviation), Vector3.forward);
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, spread * dir, range, LayerMask.GetMask("Hostile"));
-            if (hit.collider != null)
-                hit.collider.gameObject.GetComponent<Enemy>().TakeDamage(damage);
-            UnityEngine.Debug.DrawRay(transform.position, (spread * dir).normalized * range, Color.blue, 10f);
+            base.Shoot();
         }
-       
+        shotDelay = 1 / (RPM / 60);
         return true;
     }
 }

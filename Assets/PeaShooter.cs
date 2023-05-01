@@ -5,10 +5,6 @@ using UnityEngine;
 
 public class PeaShooter : Gun
 {
-    [SerializeField]
-    int damage = 20;
-    [SerializeField]
-    int range = 10;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,12 +17,10 @@ public class PeaShooter : Gun
         
     }
 
-    public override bool Shoot(Vector2 dir)
+    public override bool OutOfAmmo()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position,dir,range,LayerMask.GetMask("Hostile"));
-        if(hit.collider != null)
-            hit.collider.gameObject.GetComponent<Enemy>().TakeDamage(damage);
-        UnityEngine.Debug.DrawRay(transform.position, dir, Color.blue, 10f);
+        UnityEngine.Debug.Log("Reload");
         return true;
     }
+
 }

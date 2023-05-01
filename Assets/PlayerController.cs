@@ -60,7 +60,7 @@ public class PlayerController : MonoBehaviour
 
     bool IsGrounded()
     {
-        return Physics2D.Raycast(transform.position, Vector2.down, distToGround + 0.1f, LayerMask.GetMask("Ground"));
+        return Physics2D.Raycast(transform.position, Vector2.down, distToGround + 0.1f, LayerMask.GetMask("Ground","OneWayPlatform"));
     }
    
 
@@ -150,7 +150,13 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
 
-            equipedGun.Shoot(Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position);
+            equipedGun.Activate();
+        }
+
+        if (Input.GetKeyUp(KeyCode.Mouse0))
+        {
+
+            equipedGun.Deactivate();
         }
     }
 }
