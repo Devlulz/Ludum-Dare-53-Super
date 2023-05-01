@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     int yAccel = 1;
     [SerializeField]
+    float maxSpeed = 10f;
+    [SerializeField]
     float airControlMod = 1;
     [SerializeField]
     int gravRise = 1;
@@ -45,14 +47,14 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.W) && IsGrounded())
+        if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space)) && IsGrounded())
         {
             Debug.Log("Jump");
             rb.AddForce(Vector2.up * yAccel);
         }
 
         GunLogic();
-
+        LimitVelocity();
        
     }
 
@@ -132,6 +134,14 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("testX");
             rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x, -xMax, xMax), rb.velocity.y);
+        }
+    }
+
+    void LimitVelocity()
+    {
+        if(rb.velocity.x < maxSpeed)
+        {
+            rb.velocity = new Vector2(maxSpeed * Input.GetAxis("Horizontal"),rb.velocity.y);
         }
     }
 
