@@ -33,5 +33,6 @@ public class OneWayPlatform : MonoBehaviour
         Physics2D.IgnoreCollision(collision, GetComponent<Collider2D>());
         yield return new WaitForSeconds(.25f);
         Physics2D.IgnoreCollision(collision, GetComponent<Collider2D>(), false);
+        playerOnTop = false;
     }
 }

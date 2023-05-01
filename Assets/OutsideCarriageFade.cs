@@ -10,14 +10,16 @@ public class OutsideCarriageFade : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            sprite.Play("Fade out");
+            Debug.Log("deez");
+            sprite.Play("Fade Out");
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            sprite.Play("Fade in");
+            Debug.Log("doze");
+            sprite.Play("Fade In");
         }
     }
 }
