@@ -1968,7 +1968,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1902251867}
-  - component: {fileID: 1902251869}
   - component: {fileID: 1902251871}
   - component: {fileID: 1902251872}
   - component: {fileID: 1902251873}
@@ -1995,19 +1994,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1902251869
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1902251866}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfc8582f4c123d94d8d27157c2dcba96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 1753108516}
 --- !u!61 &1902251871
 BoxCollider2D:
   m_ObjectHideFlags: 0
