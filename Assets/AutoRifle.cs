@@ -24,6 +24,7 @@ public class AutoRifle : Gun
         if (firing && shotDelay <= 0)
         {
             Shoot();
+            shots -= 1;
         }
     }
 
@@ -39,7 +40,7 @@ public class AutoRifle : Gun
 
     public override bool OutOfAmmo()
     {
-        UnityEngine.Debug.Log("Drop Gun");
+        Destroy(gameObject);
         return true;
     }
 }

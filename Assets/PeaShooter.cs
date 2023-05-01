@@ -19,7 +19,8 @@ public class PeaShooter : Gun
 
     public override bool OutOfAmmo()
     {
-        UnityEngine.Debug.Log("Reload");
+        shotDelay = 5;
+        shots = shotCapacity;
         return true;
     }
 

@@ -55,21 +55,21 @@ public class PlayerController : MonoBehaviour
 
         GunLogic();
         LimitVelocity();
-       
+
     }
 
     bool IsGrounded()
     {
-        return Physics2D.Raycast(transform.position, Vector2.down, distToGround + 0.1f, LayerMask.GetMask("Ground","OneWayPlatform"));
+        return Physics2D.Raycast(transform.position, Vector2.down, distToGround + 0.1f, LayerMask.GetMask("Ground", "OneWayPlatform"));
     }
-   
+
 
     private void FixedUpdate()
     {
         Movement();
         GravityMod();
 
-        
+
     }
 
     void GravityMod()
@@ -77,7 +77,7 @@ public class PlayerController : MonoBehaviour
         if (rb.velocity.y < -.1)
         {
             rb.gravityScale = gravFall;
-            if(!IsGrounded())
+            if (!IsGrounded())
                 anim.Play("Fall");
         }
         else
@@ -95,7 +95,7 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKey(KeyCode.D))
             {
                 rb.AddForce(Vector2.right * xAccel);
-                anim.transform.localScale = new Vector3(-1,1,1);
+                anim.transform.localScale = new Vector3(-1, 1, 1);
                 anim.Play("Run");
             }
             else if (Input.GetKey(KeyCode.A))
@@ -118,13 +118,13 @@ public class PlayerController : MonoBehaviour
                 rb.AddForce(Vector2.right * xAccel * airControlMod);
                 anim.transform.localScale = new Vector3(-1, 1, 1);
             }
-                
+
             else if (Input.GetKey(KeyCode.A))
             {
                 rb.AddForce(Vector2.left * xAccel * airControlMod);
                 anim.transform.localScale = new Vector3(1, 1, 1);
             }
-                
+
         }
 
 
@@ -139,24 +139,51 @@ public class PlayerController : MonoBehaviour
 
     void LimitVelocity()
     {
-        if(rb.velocity.x < maxSpeed)
+        if (rb.velocity.x < maxSpeed)
         {
-            rb.velocity = new Vector2(maxSpeed * Input.GetAxis("Horizontal"),rb.velocity.y);
+            rb.velocity = new Vector2(maxSpeed * Input.GetAxis("Horizontal"), rb.velocity.y);
         }
     }
 
     void GunLogic()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (equipedGun != null)
         {
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                equipedGun.Activate();
+            }
 
-            equipedGun.Activate();
+            if (Input.GetKeyUp(KeyCode.Mouse0))
+            {
+                equipedGun.Deactivate();
+            }
+        }
+        else
+        {
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                fallbackGun.Activate();
+            }
+
+            if (Input.GetKeyUp(KeyCode.Mouse0))
+            {
+                fallbackGun.Deactivate();
+            }
         }
 
-        if (Input.GetKeyUp(KeyCode.Mouse0))
-        {
+    }
 
-            equipedGun.Deactivate();
+    public void EquipGun(Gun newGun)
+    {
+        if (equipedGun != null)
+        {
+            Destroy(equipedGun.gameObject);
+            equipedGun = null;
         }
+        equipedGun = newGun;
+        newGun.transform.parent = this.gameObject.transform;
+        newGun.transform.localPosition = Vector3.zero;
+        newGun.GetComponent<SpriteRenderer>().enabled = false;
     }
 }

@@ -21,7 +21,7 @@ public class Shotgun : Gun
 
     public override bool OutOfAmmo()
     {
-        UnityEngine.Debug.Log("Drop Gun");
+        Destroy(gameObject);
         return true;
     }
 
