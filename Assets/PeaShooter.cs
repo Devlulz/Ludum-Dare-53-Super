@@ -7,6 +7,9 @@ public class PeaShooter : Gun
 {
     [SerializeField]
     float reloadTime = 5;
+
+    [SerializeField]
+    Animator anim;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +20,15 @@ public class PeaShooter : Gun
     void Update()
     {
         
+    }
+
+    public override bool Shoot()
+    {
+        base.Shoot();
+        anim.Play("BANG");
+
+        shotDelay = 1 / (RPM / 60);
+        return true;
     }
 
     public override bool OutOfAmmo()

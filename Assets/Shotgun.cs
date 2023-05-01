@@ -8,6 +8,9 @@ public class Shotgun : Gun
     [SerializeField]
     int pellets = 5;
 
+    [SerializeField]
+    Animator anim;
+
     public override bool OutOfAmmo()
     {
         Destroy(gameObject);
@@ -19,6 +22,7 @@ public class Shotgun : Gun
         for (int i = 0; i < pellets; i++)
         {
             base.Shoot();
+            anim.Play("BANG");
         }
         shotDelay = 1 / (RPM / 60);
         return true;

@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
     {
         if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space)) && IsGrounded())
         {
-            Debug.Log("Jump");
+            //Debug.Log("Jump");
             rb.AddForce(Vector2.up * yAccel);
         }
 
@@ -138,7 +138,7 @@ public class PlayerController : MonoBehaviour
 
         if (Mathf.Abs(rb.velocity.x) > xMax)
         {
-            Debug.Log("testX");
+            //Debug.Log("testX");
             rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x, -xMax, xMax), rb.velocity.y);
         }
     }
