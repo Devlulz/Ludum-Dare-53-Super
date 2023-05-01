@@ -1136,8 +1136,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   capacity: 4
-  damage: 20
   range: 10
+  deviation: 0
+  shotDelay: 0
+  RPM: 0
+  damage: 20
 --- !u!1 &1502836386
 GameObject:
   m_ObjectHideFlags: 0
@@ -1168,10 +1171,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   capacity: 1
-  damage: 20
   range: 10
-  pellets: 5
   deviation: 10
+  shotDelay: 0
+  RPM: 60
+  damage: 20
+  pellets: 5
 --- !u!4 &1502836388
 Transform:
   m_ObjectHideFlags: 0
