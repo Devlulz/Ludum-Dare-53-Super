@@ -16,6 +16,11 @@ public class AutoRifle : Gun
     // Update is called once per frame
     void Update()
     {
+    }
+
+    public override void  FixedUpdate()
+    {
+        base.FixedUpdate();
         if (firing && shotDelay <= 0)
         {
             Shoot();

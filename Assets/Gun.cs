@@ -46,7 +46,7 @@ abstract public class Gun : MonoBehaviour
 
     virtual public bool Shoot()
     {
-        Vector2 dir = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+            Vector2 dir = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
             Quaternion spread = Quaternion.AngleAxis(Random.Range(-deviation, deviation), Vector3.forward);
             RaycastHit2D hit = Physics2D.Raycast(transform.position, spread * dir, range, LayerMask.GetMask("Hostile"));
             if (hit.collider != null)

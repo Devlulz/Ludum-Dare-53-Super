@@ -27,7 +27,6 @@ public class Shotgun : Gun
 
     public override bool Shoot()
     {
-        
         for (int i = 0; i < pellets; i++)
         {
             base.Shoot();

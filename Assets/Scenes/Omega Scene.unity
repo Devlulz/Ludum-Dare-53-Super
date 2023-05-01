@@ -1178,8 +1178,8 @@ MonoBehaviour:
   gravFall: 4
   distToGround: 0
   distBetweenSides: 0
-  equipedGun: {fileID: 0}
-  fallbackGun: {fileID: 0}
+  equipedGun: {fileID: 346088342}
+  fallbackGun: {fileID: 469175774}
   rb: {fileID: 0}
   col: {fileID: 0}
   anim: {fileID: 1374318794}
