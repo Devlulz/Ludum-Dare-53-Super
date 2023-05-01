@@ -23,8 +23,8 @@ public class PlayerController : MonoBehaviour
     float distToGround;
     [SerializeField]
     float distBetweenSides;
-    [SerializeField]
-    Gun equipedGun;
+
+    public Gun equipedGun;
     [SerializeField]
     Gun fallbackGun;
     [SerializeField]
@@ -34,6 +34,8 @@ public class PlayerController : MonoBehaviour
     LayerMask lm;
     [SerializeField]
     Animator anim;
+
+    public bool facingRight;
 
     // Start is called before the first frame update
     void Start()
@@ -95,14 +97,16 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKey(KeyCode.D))
             {
                 rb.AddForce(Vector2.right * xAccel);
+                facingRight = true;
                 anim.transform.localScale = new Vector3(-1, 1, 1);
-                anim.Play("Run");
+                anim.Play("Run_1Arm");
             }
             else if (Input.GetKey(KeyCode.A))
             {
                 rb.AddForce(Vector2.left * xAccel);
+                facingRight = false;
                 anim.transform.localScale = new Vector3(1, 1, 1);
-                anim.Play("Run");
+                anim.Play("Run_1Arm");
             }
             else
             {
@@ -116,12 +120,14 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKey(KeyCode.D))
             {
                 rb.AddForce(Vector2.right * xAccel * airControlMod);
+                facingRight = true;
                 anim.transform.localScale = new Vector3(-1, 1, 1);
             }
 
             else if (Input.GetKey(KeyCode.A))
             {
                 rb.AddForce(Vector2.left * xAccel * airControlMod);
+                facingRight = false;
                 anim.transform.localScale = new Vector3(1, 1, 1);
             }
 
