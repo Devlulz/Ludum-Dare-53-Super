@@ -30,7 +30,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     Collider2D col;
     LayerMask lm;
-
+    [SerializeField]
+    Animator anim;
 
     // Start is called before the first frame update
     void Start()
@@ -72,9 +73,17 @@ public class PlayerController : MonoBehaviour
     void GravityMod()
     {
         if (rb.velocity.y < -.1)
+        {
             rb.gravityScale = gravFall;
+            if(!IsGrounded())
+                anim.Play("Fall");
+        }
         else
+        {
             rb.gravityScale = gravRise;
+            if (!IsGrounded())
+                anim.Play("Jump");
+        }
     }
 
     void Movement()
@@ -82,19 +91,38 @@ public class PlayerController : MonoBehaviour
         if (IsGrounded())
         {
             if (Input.GetKey(KeyCode.D))
+            {
                 rb.AddForce(Vector2.right * xAccel);
+                anim.transform.localScale = new Vector3(-1,1,1);
+                anim.Play("Run");
+            }
             else if (Input.GetKey(KeyCode.A))
+            {
                 rb.AddForce(Vector2.left * xAccel);
+                anim.transform.localScale = new Vector3(1, 1, 1);
+                anim.Play("Run");
+            }
             else
+            {
                 rb.velocity = new Vector2(0, rb.velocity.y);
+                anim.Play("Idle");
+            }
         }
 
         else
         {
             if (Input.GetKey(KeyCode.D))
+            {
                 rb.AddForce(Vector2.right * xAccel * airControlMod);
+                anim.transform.localScale = new Vector3(-1, 1, 1);
+            }
+                
             else if (Input.GetKey(KeyCode.A))
+            {
                 rb.AddForce(Vector2.left * xAccel * airControlMod);
+                anim.transform.localScale = new Vector3(1, 1, 1);
+            }
+                
         }
 
 
