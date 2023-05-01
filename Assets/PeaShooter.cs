@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class PeaShooter : Gun
 {
+    [SerializeField]
+    float reloadTime = 5;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +21,8 @@ public class PeaShooter : Gun
 
     public override bool OutOfAmmo()
     {
-        UnityEngine.Debug.Log("Reload");
+        shotDelay = reloadTime;
+        shots = shotCapacity;
         return true;
     }
 
