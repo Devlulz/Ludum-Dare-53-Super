@@ -8,6 +8,8 @@ public class OpeningSceneCode : MonoBehaviour
     [SerializeField]
     string nextScene;
 
+    public GameObject panel;
+
     void Start()
     {
         StartCoroutine(GoToNextScene());
@@ -16,6 +18,8 @@ public class OpeningSceneCode : MonoBehaviour
     IEnumerator GoToNextScene()
     {
         yield return new WaitForSeconds(28f);
+        panel.SetActive(true);
+        yield return new WaitForSeconds(5f);
         SceneManager.LoadScene(nextScene);
     }
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Enemy : Character
 {
     [SerializeField]
@@ -28,6 +29,7 @@ public class Enemy : Character
 
     IEnumerator Die()
     {
+        SurvivalTime.instance.extraScore += 50;
         yield return new WaitForSeconds(.15f);
         Destroy(gameObject);
     }

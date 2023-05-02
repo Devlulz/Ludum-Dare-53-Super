@@ -551,7 +551,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 0
-  maxHP: 30
+  maxHP: 100
+  flash: {fileID: 2100000, guid: 32b823d659254f3438f845f5245be21c, type: 2}
+  OGMat: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  duration: 0.15
+  sprite: {fileID: 6317708416601116645}
 --- !u!1 &6317708416944812369
 GameObject:
   m_ObjectHideFlags: 0
